@@ -50,7 +50,6 @@ main {
     grid: auto-flow / repeat(4, 1fr);
     max-width: 670px;
     height: 100%;
-    /*gap: 0 3em; */
 }
 
 
