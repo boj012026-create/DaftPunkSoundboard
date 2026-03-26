@@ -6,6 +6,7 @@
     --red: #e11;
     --glow: #1cf;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +18,9 @@ body {
     font-family: cursive;
     color: var(--glow);
     height: 100vh;
-    box-shadow: 0 0 2em var(--glow);
+    box-shadow: 0 0 2em var(--red);
+    border-radius: 1em 3em;
+
 }
 
 header {
@@ -27,7 +30,7 @@ header {
     width: fit-content;
     border-radius: 1em 3em;
     padding: 0 2em;
-    margin-bottom: 2em;
+    margin: 1em 0;
     background: radial-gradient(var(--opace-glow), var(--opace-black));
     color: var(--opace-glow);
     text-shadow: 0 0 5px var(--glow);
@@ -46,7 +49,7 @@ main {
     grid: auto-flow / repeat(4, 1fr);
     max-width: 670px;
     height: 100%;
-    gap: 0 3em; 
+    /*gap: 0 3em; */
 }
 
 
@@ -78,4 +81,11 @@ main {
     box-shadow: 0 0 2em var(--red);
     transition: 500ms;
     text-shadow: 0 0 2px var(--black);
+}
+
+.flash {
+    box-shadow: 0 0 2em var(--glow);
+    background-blend-mode: hard-light;
+    transition: 500ms;
+
 }

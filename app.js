@@ -1,5 +1,6 @@
 const soundContainer = document.getElementById("sound-container");
-const header = document.getElementById("header");
+const header = document.querySelector("header");
+const body = document.querySelector("body");
 
 const soundMap = {
     1: 'work_it',
@@ -45,6 +46,7 @@ const playSound = (sound) => {
     const button = document.getElementById(sound);
     button.classList.add('active');
     header.classList.toggle('active');
+    body.classList.toggle('flash');
 
     const audio= new Audio(`./sounds/${sound}.wav`);
     audio.volume = 0.3;
