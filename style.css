@@ -1,0 +1,81 @@
+:root {
+    --opace-black: #1115;
+    --opace-red: #e119;
+    --opace-glow: #1cf9;
+    --black: #111;
+    --red: #e11;
+    --glow: #1cf;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--black);
+    background-image: url("./images/Daft_Punk.png");
+    background-position: center;
+    background-size: contain;
+    font-family: cursive;
+    color: var(--glow);
+    height: 100vh;
+    box-shadow: 0 0 2em var(--glow);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    width: fit-content;
+    border-radius: 1em 3em;
+    padding: 0 2em;
+    margin-bottom: 2em;
+    background: radial-gradient(var(--opace-glow), var(--opace-black));
+    color: var(--opace-glow);
+    text-shadow: 0 0 5px var(--glow);
+    box-shadow: 0 0 2em var(--glow);
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+}
+
+#sound-container {
+    display: grid;
+    grid: auto-flow / repeat(4, 1fr);
+    max-width: 670px;
+    height: 100%;
+    gap: 0 3em; 
+}
+
+
+.sound-button {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    aspect-ratio: 1;
+    min-width: 7em;
+    background-color: #1119;
+    box-shadow: 0 0 1em  var(--glow);
+    border-radius: 6em 1em 6em;
+    transition: 500ms;
+    &:hover {
+	cursor: crosshair;
+    }
+    p {
+	&::first-letter {
+	    text-transform: capitalize;
+	}
+    }
+}
+
+.active {
+    /*background: radial-gradient(var(--opace-glow), var(--opace-red));*/
+    background: radial-gradient(var(--opace-red), var(--opace-black));
+    color: #e119;
+    box-shadow: 0 0 2em var(--red);
+    transition: 500ms;
+    text-shadow: 0 0 2px var(--black);
+}
