@@ -17,6 +17,7 @@ body {
     background-size: contain;
     font-family: cursive;
     color: var(--glow);
+    min-width: 406px;
     height: 100vh;
     box-shadow: 0 0 2em var(--red);
     border-radius: 1em 3em;
@@ -48,17 +49,16 @@ main {
 #sound-container {
     display: grid;
     grid: auto-flow / repeat(4, 1fr);
-    max-width: 670px;
-    height: 100%;
+    height: 65vh;
 }
 
 
 .sound-button {
+    font-size: 2vw;
     display: flex; 
     align-items: center;
     justify-content: center;
     padding: 0.5em 1em;
-    aspect-ratio: 1;
     min-width: 7em;
     background-color: #1119;
     box-shadow: 0 0 1em  var(--glow);
@@ -75,7 +75,6 @@ main {
 }
 
 .active {
-    /*background: radial-gradient(var(--opace-glow), var(--opace-red));*/
     background: radial-gradient(var(--opace-red), var(--opace-black));
     color: #e119;
     box-shadow: 0 0 2em var(--red);
@@ -88,4 +87,19 @@ main {
     background-blend-mode: hard-light;
     transition: 500ms;
 
+}
+
+@media (max-width: 619px) {
+    body {
+	height: 100vh;
+    }
+    #sound-container {
+	grid: repeat(8, 1fr) / repeat(2, 1fr);
+	height: 70vh;
+	width: 80vw;
+    }
+
+    .sound-button {
+	font-size: 3vw;
+    }
 }
