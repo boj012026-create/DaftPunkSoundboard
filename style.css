@@ -91,12 +91,12 @@ main {
 
 @media (max-width: 619px) {
     body {
-	height: 100vh;
+	height: 100dvh;
     }
     #sound-container {
 	grid: repeat(8, 1fr) / repeat(2, 1fr);
-	height: 70vh;
-	width: 80vw;
+	height: 70dvh;
+	width: 80dvw;
     }
 
     .sound-button {
