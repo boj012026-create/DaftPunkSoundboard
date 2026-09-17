@@ -39,7 +39,7 @@ for (let key in soundMap) {
     textElement.textContent = `${key} \> ${soundMap[key]}`
     soundElement.append(textElement);
 
-    soundElement.addEventListener('click', () => playSound(soundMap[key]))
+    soundElement.addEventListener('pointerdown', () => playSound(soundMap[key]))
 }
 
 const playSound = (sound) => {
